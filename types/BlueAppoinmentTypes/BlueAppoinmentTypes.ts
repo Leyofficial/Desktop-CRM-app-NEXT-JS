@@ -5,7 +5,7 @@ export interface IAdress {
 export type PropBlueAppoinment = {
     img? : string,
     addressInfo : IAdress,
-    appointmentDate : string | Date,
+    appointmentDate : string,
     roomArea : string,
     people  : string,
     price : string,
