@@ -2,8 +2,8 @@
 
 import React from "react";
 import {PropSidebar} from "@/types/SideBarTypes/SideBarTypes";
-import {SidebarItem} from "@/components/Sidebar/SidebarItem/SidebarItem";
 import {MdEnergySavingsLeaf} from "react-icons/md";
+import {IconButton} from "@/utility/CustomIconBtn/IconButton";
 
 export function Sidebar({list} : PropSidebar){
     return (
@@ -14,7 +14,7 @@ export function Sidebar({list} : PropSidebar){
                     </div>
                 </div>
             {list.map((item) =>
-                <SidebarItem icon={item.icon} href={item.href}/>
+                <IconButton icon={item.icon} href={item.href}/>
             )}
         </div>
     )

@@ -6,19 +6,19 @@ import {BsListTask} from "react-icons/bs";
 
 export const sideBarList: IList[] = [
     {
-        icon: <BiSolidDashboard/>,
+        icon: <BiSolidDashboard fontSize={'1.5rem'} />,
         href: '/'
     },
     {
-        icon: <HiOutlineBriefcase/>,
+        icon: <HiOutlineBriefcase fontSize={'1.5rem'} />,
         href: '/deals'
     },
     {
-        icon : <HiMiniUsers />,
+        icon : <HiMiniUsers fontSize={'1.5rem'} />,
         href : '/customers'
     },
     {
-        icon : <BsListTask />,
+        icon : <BsListTask fontSize={'1.5rem'} />,
         href  : '/tasks',
     }
 
