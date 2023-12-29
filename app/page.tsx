@@ -4,6 +4,7 @@ import {sideBarList} from "@/consts/side-bar-list";
 import {Header} from "@/components/Header/Header";
 import {BlueAppointment} from "@/components/BlueAppoinment/BlueAppointment";
 import {blueAppoinmentList} from "@/consts/blue-appoinment-list";
+import {Customers} from "@/components/Customers/Customers";
 
 export default function Home() {
     return (
@@ -18,6 +19,9 @@ export default function Home() {
                                      appointmentDate={blueAppoinmentList.appointmentDate}
                                      roomArea={blueAppoinmentList.roomArea} people={blueAppoinmentList.people}
                                      price={blueAppoinmentList.price}/>
+                </section>
+                <section>
+                    <Customers title={'Customers'} numberOfPeople={10}/>
                 </section>
             </section>
         </main>
