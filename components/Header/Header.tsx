@@ -9,7 +9,7 @@ export function Header({title, buttonTitle, isButton, href = '/'}: PropHeader) {
     return (
         <section className={'flex justify-between w-full  gap-2 items-center'}>
             <div className="text-sky-950 text-2xl font-bold font-['Inter'] leading-10">{title}</div>
-            <div className={'flex items-center gap-6 bg-slate-100  p-5'}>
+            <div className={'flex items-center gap-6 p-5'}>
                 {isButton ?
                     <>
                         <Link href={href}

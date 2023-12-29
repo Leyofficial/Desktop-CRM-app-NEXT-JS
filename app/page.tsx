@@ -10,6 +10,8 @@ import {RecentDetails} from "@/components/RecentDetails/RecentDetails";
 import {recentDetailsList} from "@/consts/recent-details-list";
 import {ProgressDeal} from "@/components/ProgressDeal/ProgressDeal";
 import {dealProgressList} from "@/consts/deal-progress-list";
+import {Customers} from "@/components/Customers/Customers";
+import {customersList} from "@/consts/customers-list";
 
 export default function Home() {
     return (
@@ -19,11 +21,11 @@ export default function Home() {
             </div>
             <section className={'w-full'}>
                 <div>
-                    <header>
+                    <header className={'w-full'}>
                         <Header href={'/add-new'} title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
                     </header>
-                    <section className={'my-5  flex gap-10'}>
-                        <div className={'w-[356px]'}>
+                    <section className={'my-5 pr-5  flex gap-7 justify-between'}>
+                        <div className={'w-full max-w-[350px]'}>
                             <div className={'mb-10'}>
                                 <BlueAppointment addressInfo={blueAppoinmentList.addressInfo}
                                                  appointmentDate={blueAppoinmentList.appointmentDate}
@@ -35,10 +37,13 @@ export default function Home() {
                                 <DealsCounter title={'Deals'} numberOfPeople={82}/>
                             </section>
                         </div>
-                       <div className={'max-w-[600px] w-full'}>
+                       <div className={'w-full'}>
                            <RecentDetails detailsList={recentDetailsList}/>
                            <ProgressDeal dealProgress={dealProgressList}/>
                        </div>
+                        <div className={'bg-slate-100 w-full rounded-md'}>
+                            <Customers customers={customersList}/>
+                        </div>
                     </section>
                 </div>
             </section>

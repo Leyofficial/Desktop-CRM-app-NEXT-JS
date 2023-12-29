@@ -5,7 +5,7 @@ import Link from "next/link";
 import {VerticalStepper} from "@/components/ProgressDeal/VerticalStepper/VericalStepper";
 export function ProgressDeal({dealProgress} :  PropProgressDeal) {
     return (
-        <div className={'p-8 w-full  border border-b-emerald-50-50 rounded-md my-10'}>
+        <div className={'p-8 w-full border border-b-emerald-50-50 rounded-md mt-5'}>
             <header className={'flex justify-between items-center'}>
                 <div className={'flex gap-3'}>
                     <div>

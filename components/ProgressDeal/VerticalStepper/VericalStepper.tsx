@@ -20,23 +20,27 @@ export function VerticalStepper({ progressSteps} : IProgressSteps) {
     })
 
     return (
-        <Stepper index={activeStep} orientation='vertical' height={'100%'} gap='5'>
-            {progressSteps.map((step, index) => (
-                <Step key={index}>
-                    <StepIndicator>
-                        <StepStatus
-                            complete={<StepIcon />}
-                        />
-                    </StepIndicator>
+        <div className={'w-full'}>
+            <Stepper index={activeStep} orientation='vertical' height={'100%'} gap='5'>
+                {progressSteps.map((step, index) => (
+                    <Step key={index}>
+                        <StepIndicator>
+                            <StepStatus
+                                complete={<StepIcon />}
+                            />
+                        </StepIndicator>
 
-                    <Box flexShrink='0'>
-                        <StepTitle>{step.date}</StepTitle>
-                        <StepDescription>{step.title}</StepDescription>
-                    </Box>
+                        <Box flexShrink='0'>
+                            <StepTitle>{step.date}</StepTitle>
+                            <StepDescription>
+                                {step.title}</StepDescription>
+                        </Box>
 
-                    <StepSeparator />
-                </Step>
-            ))}
-        </Stepper>
+                        <StepSeparator />
+                    </Step>
+                ))}
+            </Stepper>
+        </div>
+
     )
 }

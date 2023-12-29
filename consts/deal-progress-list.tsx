@@ -17,7 +17,17 @@ export const dealProgressList : IDealProgress =
             },
             {
                 date : '20 Nov 2021',
-                title : 'Installation of the new air conditioning system macOs',
+                title : 'Installation of the new air conditioning system',
+                isComplete : true
+            },
+            {
+                date : '22 Nov 2021',
+                title : 'Installation of the new air conditioning system',
+                isComplete : true
+            },
+            {
+                date : '24 Nov 2021',
+                title : 'Installation of the new air conditioning system',
                 isComplete : true
             }
         ]
