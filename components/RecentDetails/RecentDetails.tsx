@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {PropRecentDetail} from "@/types/RecentDetailsTypes/RecentDetailsTypes";
-import {IconButton} from "@/utility/CustomIconBtn/IconButton";
 import {Img} from "@chakra-ui/image";
 
 export function RecentDetails({detailsList} : PropRecentDetail ) {
@@ -16,7 +15,7 @@ export function RecentDetails({detailsList} : PropRecentDetail ) {
                     </p>
                 </Link>
             </header>
-            <main className={'mt-7'}>
+            <main className={'mt-10 flex flex-col gap-6'}>
                 {detailsList.map((deal) =>
                     <div className={'flex justify-between items-center'}>
                         <header className={'flex gap-3'}>
