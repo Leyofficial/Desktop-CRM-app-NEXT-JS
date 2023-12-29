@@ -1,7 +1,7 @@
-import React from "react";
+import React, {ReactNode} from "react";
 
 export interface IList {
-    icon : React.ReactNode,
+    icon : React.ReactNode | ReactNode | React.ReactElement | any,
     href : string
 }
 
