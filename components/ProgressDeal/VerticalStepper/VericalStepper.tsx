@@ -4,14 +4,13 @@ import {
     Step, StepDescription,
     StepIcon,
     StepIndicator,
-    StepNumber,
     Stepper,
     StepSeparator,
     StepStatus, StepTitle,
     useSteps
 } from "@chakra-ui/stepper";
 import {Box} from "@chakra-ui/react";
-import {IDealInfoProgress, IProgressSteps} from "@/types/ProgressDealTypes/ProgressDealTypes";
+import {IProgressSteps} from "@/types/ProgressDealTypes/ProgressDealTypes";
 
 export function VerticalStepper({ progressSteps} : IProgressSteps) {
     const { activeStep } = useSteps({
