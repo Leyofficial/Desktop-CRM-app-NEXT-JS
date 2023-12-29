@@ -4,7 +4,8 @@ import {sideBarList} from "@/consts/side-bar-list";
 import {Header} from "@/components/Header/Header";
 import {BlueAppointment} from "@/components/BlueAppoinment/BlueAppointment";
 import {blueAppoinmentList} from "@/consts/blue-appoinment-list";
-import {Customers} from "@/components/Customers/Customers";
+import {CustomersCounter} from "@/components/Counter/Customers/CustomersCounter";
+import {DealsCounter} from "@/components/Counter/Deals/DealsCounter";
 
 export default function Home() {
     return (
@@ -20,8 +21,9 @@ export default function Home() {
                                      roomArea={blueAppoinmentList.roomArea} people={blueAppoinmentList.people}
                                      price={blueAppoinmentList.price}/>
                 </section>
-                <section>
-                    <Customers title={'Customers'} numberOfPeople={10}/>
+                <section className={'flex flex-col gap-10'}>
+                    <CustomersCounter title={'Customers'} numberOfPeople={10}/>
+                    <DealsCounter title={'Deals'} numberOfPeople={82}/>
                 </section>
             </section>
         </main>
