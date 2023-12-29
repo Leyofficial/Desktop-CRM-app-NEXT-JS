@@ -8,6 +8,8 @@ import {CustomersCounter} from "@/components/Counter/Customers/CustomersCounter"
 import {DealsCounter} from "@/components/Counter/Deals/DealsCounter";
 import {RecentDetails} from "@/components/RecentDetails/RecentDetails";
 import {recentDetailsList} from "@/consts/recent-details-list";
+import {ProgressDeal} from "@/components/ProgressDeal/ProgressDeal";
+import {dealProgressList} from "@/consts/deal-progress-list";
 
 export default function Home() {
     return (
@@ -21,7 +23,7 @@ export default function Home() {
                         <Header href={'/add-new'} title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
                     </header>
                     <section className={'my-5  flex gap-10'}>
-                        <div>
+                        <div className={'w-[356px]'}>
                             <div className={'mb-10'}>
                                 <BlueAppointment addressInfo={blueAppoinmentList.addressInfo}
                                                  appointmentDate={blueAppoinmentList.appointmentDate}
@@ -33,8 +35,9 @@ export default function Home() {
                                 <DealsCounter title={'Deals'} numberOfPeople={82}/>
                             </section>
                         </div>
-                       <div>
+                       <div className={'max-w-[600px] w-full'}>
                            <RecentDetails detailsList={recentDetailsList}/>
+                           <ProgressDeal dealProgress={dealProgressList}/>
                        </div>
                     </section>
                 </div>

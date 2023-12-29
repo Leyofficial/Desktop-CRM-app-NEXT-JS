@@ -4,7 +4,7 @@ import {Img} from "@chakra-ui/image";
 
 export function RecentDetails({detailsList} : PropRecentDetail ) {
     return (
-        <div className={'p-6 border border-b-emerald-50-50 rounded-md w-[400px]'}>
+        <div className={'p-6 border border-b-emerald-50-50 rounded-md w-full'}>
             <header className={'flex justify-between'}>
                 <div className="text-sky-950 text-lg font-bold font-['Inter'] leading-[30px]">
                     Recent Deals

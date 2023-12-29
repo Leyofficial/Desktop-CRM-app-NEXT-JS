@@ -4,7 +4,7 @@ import {Img} from "@chakra-ui/image";
 
 export function BlueAppointment({addressInfo , people , img , price , roomArea , appointmentDate} : PropBlueAppoinment) {
     return (
-        <div className={' bg-indigo-600 text-white px-10 py-7 max-w-[356px] rounded-md'}>
+        <div className={' bg-indigo-600 text-white px-10 py-7 w-full rounded-md'}>
             <div className={' mb-7 flex justify-between items-center'}>
                 <h2 className={'text-white text-lg font-bold font-Inter leading-[30px]'}>
                     Next Appointment
@@ -12,7 +12,7 @@ export function BlueAppointment({addressInfo , people , img , price , roomArea ,
                 <TbPointFilled />
             </div>
             <div className={'flex items-center gap-2 mb-10'}>
-                <Img width={'50px'} height={'50px'} className={'rounded-full'}  src={'https://bit.ly/dan-abramov'}/>
+                <Img width={'50px'} height={'50px'} className={'rounded-full'}  src={'https://bit.ly/dan-abramov' || img}/>
                 <div>
                     <h2 className={'font-bold font-Inter'}>
                         {addressInfo.address}

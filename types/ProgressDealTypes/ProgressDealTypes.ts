@@ -7,11 +7,15 @@ export interface IDealInfoProgress {
     title : string,
 }
 
+export interface IProgressSteps  {
+    progressSteps : IDealInfoProgress[]
+}
+
 export interface IDealProgress {
-    img : string | React.ReactNode | ReactNode,
+    img : string | React.ReactNode | ReactNode | null,
     address : IAddress,
     progress : string,
-    progressSteps : IDealInfoProgress[] | IDealInfoProgress
+    progressSteps : IDealInfoProgress[]
 }
 export type PropProgressDeal = {
     dealProgress : IDealProgress

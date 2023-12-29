@@ -15,7 +15,7 @@ export function CustomersCounter({title , numberOfPeople} : PropCounter){
     }, [numberOfPeople]);
 
     return (
-        <div className={`relative w-[356px] border border-b-emerald-50-50 rounded-md p-8 flex-col justify-start items-start inline-flex`}>
+        <div className={`relative border border-b-emerald-50-50 rounded-md p-8 flex-col justify-start items-start inline-flex`}>
             <div className="text-slate-400 text-lg font-medium font-['Inter'] leading-[30px]">{title}</div>
             <div className={'flex w-full justify-between'}>
                 <div className={`${!isActive ? 'text-slate-400' : 'text-sky-950'} text-5xl font-semibold font-['Manrope'] leading-[80px]`}>{numberOfPeople}</div>
