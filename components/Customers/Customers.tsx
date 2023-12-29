@@ -4,7 +4,7 @@ import {Customer} from "@/components/Customers/Customer/Customer";
 
 export function Customers({customers} : CustomersType){
     return (
-        <div className={'p-5 py-6 rounded-md'}>
+        <div className={'rounded-md mb-10'}>
             <div className={'flex justify-between items-center'}>
                 <h2 className={'text-sky-950 text-lg font-bold '}>Customers</h2>
                 <Link href={'/'} className={"text-right text-indigo-600 text-sm font-medium font-['Inter'] leading-[30px]"}>View All</Link>

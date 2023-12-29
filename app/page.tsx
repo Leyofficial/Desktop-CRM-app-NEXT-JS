@@ -12,6 +12,7 @@ import {ProgressDeal} from "@/components/ProgressDeal/ProgressDeal";
 import {dealProgressList} from "@/consts/deal-progress-list";
 import {Customers} from "@/components/Customers/Customers";
 import {customersList} from "@/consts/customers-list";
+import {ToDo} from "@/components/ToDo/ToDo";
 
 export default function Home() {
     return (
@@ -41,8 +42,9 @@ export default function Home() {
                            <RecentDetails detailsList={recentDetailsList}/>
                            <ProgressDeal dealProgress={dealProgressList}/>
                        </div>
-                        <div className={'bg-slate-100 w-full rounded-md'}>
+                        <div className={'p-5 py-6 bg-slate-100 w-full rounded-md'}>
                             <Customers customers={customersList}/>
+                            <ToDo/>
                         </div>
                     </section>
                 </div>
