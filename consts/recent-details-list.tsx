@@ -1,4 +1,3 @@
-import React from "react";
 import {IRecentDetailType} from "@/types/RecentDetailsTypes/RecentDetailsTypes";
 
 export const recentDetailsList : IRecentDetailType[] = [

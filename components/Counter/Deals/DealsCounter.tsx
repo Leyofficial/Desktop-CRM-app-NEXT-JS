@@ -1,6 +1,5 @@
 'use client'
 import {useEffect, useState} from "react";
-import {HiMiniUsers} from "react-icons/hi2";
 import {PropCounter} from "@/types/CounterTypes/counter";
 import {HiOutlineBriefcase} from "react-icons/hi";
 

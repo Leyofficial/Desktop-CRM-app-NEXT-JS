@@ -27,7 +27,7 @@ export const todoList : PropToDo[] = [
         task : 'Weekly meeting'
     },
     {
-        status : 'pending',
+        status : 'done',
         date : '2 May 2024',
         task : 'Add new services'
     }
