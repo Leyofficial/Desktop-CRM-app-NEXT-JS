@@ -5,7 +5,7 @@ import {IoIosArrowForward} from "react-icons/io";
 
 export function ModalAddItem({icon , title , onClickCallback} : PropModalAddItem) {
     return (
-        <div className={'border border-b-slate-50 w-full p-4 flex justify-between items-center'}>
+        <div onClick={() => onClickCallback(title)} className={'cursor-pointer border border-b-slate-50 w-full p-4 flex justify-between items-center'}>
             <section className={'flex gap-3 items-center'}>
                 <div className={'text-neutral-500'}>
                     {icon}

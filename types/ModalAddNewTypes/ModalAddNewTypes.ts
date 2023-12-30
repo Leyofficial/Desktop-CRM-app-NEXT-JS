@@ -9,5 +9,6 @@ export type TypeModalAddNew = {
 export type PropModalAddItem = {
     icon : React.ReactNode | ReactNode | string,
     title : string,
-    onClickCallback? : () => void
+    onClickCallback? : any
+    callbackText? : any
 }
