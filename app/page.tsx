@@ -22,7 +22,7 @@ export default function Home() {
             <section className={'w-full'}>
                 <div>
                     <header className={'w-full'}>
-                        <Header href={'/add-new'} title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
+                        <Header title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
                     </header>
                     <section className={'my-5 pr-5  flex gap-7 justify-between'}>
                         <div className={'w-full max-w-[350px]'}>
