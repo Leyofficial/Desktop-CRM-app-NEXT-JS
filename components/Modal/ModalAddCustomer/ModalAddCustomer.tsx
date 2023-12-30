@@ -6,12 +6,9 @@ import {
     ModalHeader,
 } from "@chakra-ui/react";
 import {CustomInput} from "@/components/CustomInput/CustomInput";
+import {IModalAddCustomer} from "@/types/ModalTypes/ModalTypes";
 
-interface IModalAddCustomer {
-    onClose: () => void,
-    title: string,
-    // list : Array<any>
-}
+
 
 export function ModalAddCustomer({onClose, title}: IModalAddCustomer) {
     return (

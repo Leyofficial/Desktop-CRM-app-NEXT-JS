@@ -11,6 +11,7 @@ import {modalAddList} from "@/consts/modal-add-list";
 import {ModalAddItem} from "@/components/Modal/ModalAddNew/ModalAddItem/ModalAddItem";
 import {useEffect, useState} from "react";
 import {ModalAddCustomer} from "@/components/Modal/ModalAddCustomer/ModalAddCustomer";
+import {ModalAddDeal} from "@/components/Modal/ModalAddDeal/ModalAddDeal";
 
 
 export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
@@ -26,6 +27,7 @@ export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
                 <ModalOverlay />
                 <ModalContent>
                     {userChoose === 'Customer' ? <ModalAddCustomer title={'Add New Customer'} onClose={onClose}/> :
+                        userChoose  === 'Deal' ?  <ModalAddDeal isOpen={isOpen} title={'Select Customer'} onClose={onClose}/> :
                         <>
                             <ModalHeader>
                                 <p className={'w-[105px] text-slate-400 font-medium font-[\'Inter\'] leading-[30px]'}>
