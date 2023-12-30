@@ -18,7 +18,7 @@ export function ModalAddDeal({onClose, isOpen, title}: IModalAddCustomer) {
 
     return (
         <>
-            {userChoose ? <AddDeal onClose={onClose} title={'Add new deal'} user={userChoose}/> :
+            {userChoose ? <AddDeal changeCustomer={setUserChoose} onClose={onClose} title={'Add new deal'} user={userChoose}/> :
                 <> <ModalHeader>{title}</ModalHeader>
                     <ModalCloseButton/>
                     <ModalBody>
