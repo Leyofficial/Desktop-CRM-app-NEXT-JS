@@ -10,8 +10,8 @@ export function Customers({customers} : CustomersType){
                 <Link href={'/'} className={"text-right text-indigo-600 text-sm font-medium font-['Inter'] leading-[30px]"}>View All</Link>
             </div>
             <div className={'mt-10 flex flex-col gap-5'}>
-                {customers.map((customer) => {
-                    return <Customer email={customer.email} img={customer.img} name={customer.name}/>
+                {customers.map((customer , index) => {
+                    return <Customer key={index} email={customer.email} img={customer.img} name={customer.name}/>
                 })}
             </div>
         </div>

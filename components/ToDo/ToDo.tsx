@@ -16,8 +16,8 @@ export function ToDo() {
                         All</Link>
                 </div>
                 <div className={'flex flex-col gap-3'}>
-                    {todoList.map((todo) =>
-                        <ToDoItem date={todo.date} status={todo.status} task={todo.task}/>)}
+                    {todoList.map((todo , index) =>
+                        <ToDoItem key={index} date={todo.date} status={todo.status} task={todo.task}/>)}
                 </div>
             </div>
             <Link href={'/'}>

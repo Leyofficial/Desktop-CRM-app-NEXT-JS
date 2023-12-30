@@ -16,8 +16,8 @@ export function RecentDetails({detailsList} : PropRecentDetail ) {
                 </Link>
             </header>
             <main className={'mt-10 flex flex-col gap-6'}>
-                {detailsList.map((deal) =>
-                    <div className={'flex justify-between items-center'}>
+                {detailsList.map((deal , index) =>
+                    <div key={index} className={'flex justify-between items-center'}>
                         <header className={'flex gap-3'}>
                             <Img width={'50px'} height={'50px'} className={'rounded-full'}  src={'https://bit.ly/dan-abramov'}/>
                             <div className={''}>

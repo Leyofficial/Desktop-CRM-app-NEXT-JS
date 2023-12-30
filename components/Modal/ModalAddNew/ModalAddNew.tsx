@@ -26,7 +26,7 @@ export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
 
                     <ModalBody padding={0} borderRadius="md" marginY={2}>
                         {modalAddList.map((item) =>
-                            <ModalAddItem icon={item.icon} title={item.title} />
+                            <ModalAddItem key={item.title} icon={item.icon} title={item.title} />
                         )}
                     </ModalBody>
                 </ModalContent>

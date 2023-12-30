@@ -26,24 +26,33 @@ export default function Home() {
                     </header>
                     <section className={'my-5 pr-5  flex gap-7 justify-between'}>
                         <div className={'w-full max-w-[350px]'}>
-                            <div className={'mb-10'}>
+                            <div className={'mb-10'} data-testid="blue-appointment">
                                 <BlueAppointment addressInfo={blueAppoinmentList.addressInfo}
                                                  appointmentDate={blueAppoinmentList.appointmentDate}
-                                                 roomArea={blueAppoinmentList.roomArea} people={blueAppoinmentList.people}
+                                                 roomArea={blueAppoinmentList.roomArea}
+                                                 people={blueAppoinmentList.people}
                                                  price={blueAppoinmentList.price}/>
                             </div>
-                            <section className={'flex flex-col gap-7'}>
+                            <section data-testid="customers-counter" className={'flex flex-col gap-7'}>
                                 <CustomersCounter title={'Customers'} numberOfPeople={10}/>
                                 <DealsCounter title={'Deals'} numberOfPeople={82}/>
                             </section>
                         </div>
-                       <div className={'w-full'}>
-                           <RecentDetails detailsList={recentDetailsList}/>
-                           <ProgressDeal dealProgress={dealProgressList}/>
-                       </div>
+                        <div className={'w-full'}>
+                            <div data-testid={'recent-details'}>
+                                <RecentDetails detailsList={recentDetailsList}/>
+                            </div>
+                            <div data-testid={'progress-deal'}>
+                                <ProgressDeal dealProgress={dealProgressList}/>
+                            </div>
+                        </div>
                         <div className={'p-5 py-6 bg-slate-100 w-full rounded-md'}>
-                            <Customers customers={customersList}/>
-                            <ToDo/>
+                            <div data-testid={'customers'}>
+                                <Customers customers={customersList}/>
+                            </div>
+                            <div data-testid={'to-do'}>
+                                <ToDo/>
+                            </div>
                         </div>
                     </section>
                 </div>
