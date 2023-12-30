@@ -1,6 +1,4 @@
-import {Sidebar} from "@/components/Sidebar/Sidebar";
-import {sideBarList} from "@/consts/side-bar-list";
-import {Header} from "@/components/Header/Header";
+
 import {BlueAppointment} from "@/components/BlueAppoinment/BlueAppointment";
 import {blueAppoinmentList} from "@/consts/blue-appoinment-list";
 import {CustomersCounter} from "@/components/Counter/Customers/CustomersCounter";
@@ -15,15 +13,6 @@ import {ToDo} from "@/components/ToDo/ToDo";
 
 export default function Home() {
     return (
-        <main className={'flex gap-10'}>
-            <div>
-                <Sidebar list={sideBarList}/>
-            </div>
-            <section className={'w-full'}>
-                <div>
-                    <header className={'w-full'}>
-                        <Header title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
-                    </header>
                     <section className={'my-5 pr-5  flex gap-7 justify-between'}>
                         <div className={'w-full max-w-[350px]'}>
                             <div className={'mb-10'} data-testid="blue-appointment">
@@ -55,8 +44,5 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                </div>
-            </section>
-        </main>
     )
 }

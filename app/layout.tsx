@@ -3,7 +3,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import {Providers} from "@/Providers/Providers";
 import React from "react";
-
+import {Sidebar} from "@/components/Sidebar/Sidebar";
+import {sideBarList} from "@/consts/side-bar-list";
+import {Header} from "@/components/Header/Header";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,7 +22,20 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Providers>
-        {children}
+          <main className={'flex gap-10'}>
+              <div>
+                  <Sidebar list={sideBarList}/>
+              </div>
+              <section className={'w-full'}>
+                  <div>
+                      <header className={'w-full'}>
+                          <Header title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
+                      </header>
+                      <section>       {children}</section>
+                  </div>
+              </section>
+          </main>
+
       </Providers></body>
     </html>
   )
