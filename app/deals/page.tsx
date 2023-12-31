@@ -7,10 +7,17 @@ import {BsImageAlt} from "react-icons/bs";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {ModalEditDeal} from "@/components/Modal/ModalEditDeal/ModalEditDeal";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
+import {useRouter} from "next/navigation";
 
 
 export default function DealsPage() {
+    const router = useRouter()
     const {isOpen, onOpen, onClose} = useDisclosure()
+
+    function handleClick(id : string) {
+        router.push(`/deals/${id}`)
+    }
+
     return (
         <div className={'w-full mt-10 '}>
             <header className={'flex items-center justify-between'}>
@@ -35,7 +42,7 @@ export default function DealsPage() {
                         </Thead>
                         <Tbody>
                             {dealsList.map((item) =>
-                                <Tr>
+                                <Tr className={'cursor-pointer'} onClick={() => handleClick(item.deal.id)}>
                                     <DealItem onClick={onOpen} deal={item.deal}/>
                                 </Tr>
                             )}

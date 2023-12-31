@@ -9,7 +9,8 @@ export const dealsList : PropDeal[] = [
             area : '100',
             date : 'Nov 14, 2021 07:00 AM',
             price : '6000',
-            status : 'in progress'
+            status : 'in progress',
+            id : '1asd2b21'
         }
     },
     {
@@ -22,7 +23,8 @@ export const dealsList : PropDeal[] = [
             area : '1000',
             date : 'Nov 14, 2021 07:00 AM',
             price : '100.000',
-            status : 'in progress'
+            status : 'in progress',
+            id : '2sd2e1d'
         }
     }
 ]
@@ -42,4 +44,5 @@ export interface IDeal {
     date : string
     price : string
     status : string
+    id : string
 }

@@ -6,8 +6,10 @@ import {Td,} from "@chakra-ui/table";
 
 export function DealItem({deal , onClick}: PropDeal) {
     const {img, addressInfo, area, date, price, status} = deal
+
     return (
         <>
+
             <Td>
                 <Img width={'50px'} height={'50px'} className={'rounded-full'}
                      src={'https://bit.ly/dan-abramov' || img}/>
@@ -34,6 +36,5 @@ export function DealItem({deal , onClick}: PropDeal) {
                 </div>
             </Td>
         </>
-
     )
 }
