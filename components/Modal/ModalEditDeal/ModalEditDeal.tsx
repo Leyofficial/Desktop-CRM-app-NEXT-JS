@@ -1,8 +1,6 @@
 import {
-    Button,
     ModalBody,
     ModalCloseButton,
-    ModalFooter,
     ModalHeader, Select,
 } from "@chakra-ui/react";
 import {CustomInput} from "@/components/CustomInput/CustomInput";
