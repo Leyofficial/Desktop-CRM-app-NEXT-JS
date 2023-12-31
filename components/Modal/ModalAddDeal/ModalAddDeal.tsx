@@ -29,7 +29,6 @@ export function ModalAddDeal({onClose, isOpen, title}: IModalAddCustomer) {
                             )}
                         </div>
                     </ModalBody>
-
                     <ModalFooter>
                     </ModalFooter>
                 </>

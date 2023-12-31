@@ -28,6 +28,7 @@ export const dealsList : PropDeal[] = [
 ]
 
 export type PropDeal = {
+    onClick : () => void;
     deal : IDeal
 }
 

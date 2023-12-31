@@ -2,9 +2,9 @@
 import {PropDeal} from "@/consts/deals-list";
 import {Img} from "@chakra-ui/image";
 import {FiEdit3} from "react-icons/fi";
-import {Td, Th, Tr} from "@chakra-ui/table";
+import {Td,} from "@chakra-ui/table";
 
-export function DealItem({deal}: PropDeal) {
+export function DealItem({deal , onClick}: PropDeal) {
     const {img, addressInfo, area, date, price, status} = deal
     return (
         <>
@@ -29,7 +29,7 @@ export function DealItem({deal}: PropDeal) {
                     className="text-indigo-600 text-xs font-medium font-['Inter'] uppercase leading-tight">{status.toUpperCase()}</div>
             </Td>
             <Td>
-                <div className={'text-slate-400 cursor-pointer'}>
+                <div onClick={onClick} className={'text-slate-400 cursor-pointer'}>
                     <FiEdit3 fontSize={'1.5rem'}/>
                 </div>
             </Td>

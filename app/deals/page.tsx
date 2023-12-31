@@ -2,18 +2,21 @@
 import {dealsList} from "@/consts/deals-list";
 import {DealItem} from "@/components/DealItem/DealItem";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr} from "@chakra-ui/table";
+import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
 import {BsImageAlt} from "react-icons/bs";
+import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
+import {ModalEditDeal} from "@/components/Modal/ModalEditDeal/ModalEditDeal";
+import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 
 
 export default function DealsPage() {
-
+    const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <div className={'w-full mt-10 '}>
             <header className={'flex items-center justify-between'}>
                 <h2 className={'text-sky-950 text-xl font-bold font-[\'Inter\']'}>Total : {dealsList.length} deal/s</h2>
                 <div>
-                   <CustomSelector/>
+                    <CustomSelector/>
                 </div>
             </header>
             <main className={'mt-10'}>
@@ -31,15 +34,21 @@ export default function DealsPage() {
                             </Tr>
                         </Thead>
                         <Tbody>
-                                {dealsList.map((item) =>
-                                    <Tr>
-                                    <DealItem deal={item.deal}/>
-                                    </Tr>
-                                )}
+                            {dealsList.map((item) =>
+                                <Tr>
+                                    <DealItem onClick={onOpen} deal={item.deal}/>
+                                </Tr>
+                            )}
                         </Tbody>
                     </Table>
                 </TableContainer>
             </main>
+            <Modal size={'xl'} closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay/>
+                <ModalContent>
+                    <ModalEditDeal  onClose={onClose} title={'Edit Deal'}/>
+                </ModalContent>
+            </Modal>
 
         </div>
     )
