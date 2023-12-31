@@ -15,7 +15,7 @@ export function Customer({img, name, email}: ICustomerTypes) {
                     <p className={'text-slate-400'}>{email}</p>
                 </div>
             </div>
-            <div className={'text-slate-400'}>
+            <div className={'text-slate-400 cursor-pointer'}>
                 <FiEdit3 fontSize={'1.5rem'}/>
             </div>
         </main>

@@ -26,7 +26,7 @@ export default function RootLayout({
               <div>
                   <Sidebar list={sideBarList}/>
               </div>
-              <section className={'w-full'}>
+              <section className={'w-full px-4'}>
                   <div>
                       <header className={'w-full'}>
                           <Header title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>
