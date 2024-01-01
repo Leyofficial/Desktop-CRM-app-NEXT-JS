@@ -11,7 +11,7 @@ export function DealItem({deal, onClick}: PropDeal) {
 
     function handleClick(e: any) {
         if (e?.target?.id === 'editBtn') return
-        router.push(`/customers/${deal.id}`)
+        router.push(`/deals/${deal.id}`)
     }
 
     const {img, addressInfo, area, date, price, status} = deal
