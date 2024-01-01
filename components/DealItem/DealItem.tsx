@@ -7,14 +7,14 @@ import {useRouter} from "next/navigation";
 import {Tr} from "@chakra-ui/react";
 
 export function DealItem({deal, onClick}: PropDeal) {
-    const router = useRouter()
+    const router = useRouter();
 
     function handleClick(e: any) {
         if (e?.target?.id === 'editBtn') return
         router.push(`/deals/${deal.id}`)
     }
 
-    const {img, addressInfo, area, date, price, status} = deal
+    const {img, addressInfo, area, date, price, status} = deal;
 
     return (
         <Tr onClick={handleClick} className={'cursor-pointer'}>
@@ -39,10 +39,11 @@ export function DealItem({deal, onClick}: PropDeal) {
                     className="text-indigo-600 text-xs font-medium font-['Inter'] uppercase leading-tight">{status.toUpperCase()}</div>
             </Td>
             <Td>
-                <div onClick={onClick} className={'text-slate-400 cursor-pointer'}>
-                    <FiEdit3 fontSize={'1.7rem'}/>
-                </div>
+                    <div onClick={onClick} className={'text-slate-400 cursor-pointer'}>
+                        <FiEdit3 id="editBtn" fontSize={'1.7rem'}/>
+                    </div>
+
             </Td>
         </Tr>
-    )
+    );
 }

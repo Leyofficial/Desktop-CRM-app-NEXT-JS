@@ -2,7 +2,7 @@ export const dealDetailList = {
     deal: {
         userInfo: {
             img: null,
-            firstName: 'Deanna',
+            name: 'Deanna',
             lastName: 'Annis',
             email: 'brodrigues@gmail.com',
             phone: '617-952-4069',

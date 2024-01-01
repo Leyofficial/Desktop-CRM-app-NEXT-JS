@@ -1,13 +1,18 @@
+'use client'
 import {dealDetailList} from "@/consts/deal-detail-list";
 import {Img} from "@chakra-ui/image";
 import {IoTrashOutline} from "react-icons/io5";
 import {FiEdit3} from "react-icons/fi";
 import {Skeleton} from "@chakra-ui/skeleton";
+import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
+import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
+import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 
 export default function DealItemPage({params} : {params : {
     id : string
     }}) {
     const {deal} = dealDetailList
+    const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <div className={'bg-slate-50 rounded-md '}>
             <header className={'flex py-10 px-8  w-full gap-24  bg-opacity-90'}>
@@ -16,7 +21,7 @@ export default function DealItemPage({params} : {params : {
                          src={'https://bit.ly/dan-abramov' || deal.userInfo.img}/>
                     <div>
                         <p className={'text-slate-400 text-sm font-normal font-[\'Inter\'] leading-[30px]'}>Customer</p>
-                        <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.userInfo.firstName} {deal.userInfo.lastName}</h2>
+                        <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.userInfo.name} {deal.userInfo.lastName}</h2>
                     </div>
                 </div>
                 <div>
@@ -45,7 +50,7 @@ export default function DealItemPage({params} : {params : {
                     <div
                         className="w-[50px] cursor-pointer  h-[50px] p-[15px] bg-white rounded-[50px] border border-slate-200 justify-center items-center inline-flex">
                         <div className="w-5 h-5 pl-[1.87px] pr-[1.88px] py-px justify-center items-center inline-flex">
-                            <div className="w-[16.25px] h-[17.92px] relative"><FiEdit3/>
+                            <div onClick={onOpen} className="w-[16.25px] h-[17.92px] relative"><FiEdit3/>
                             </div>
                         </div>
                     </div>
@@ -99,7 +104,10 @@ export default function DealItemPage({params} : {params : {
                         <Skeleton height={'400px'} width={'420px'}/>
                     </div>
                 </div>
-
+                <Modal size={'xl'} closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay/>
+                    <ModalContent> <AddDeal user={deal.userInfo} onClose={onClose} title={'Add new deal'}/>
+                    </ModalContent></Modal>
             </main>
         </div>
     )
