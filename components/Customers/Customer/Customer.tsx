@@ -1,8 +1,7 @@
-import {ICustomerTypes} from "@/types/CustomerTypes/CustomerTypes";
 import {Img} from "@chakra-ui/image";
 import {FiEdit3} from "react-icons/fi";
 
-export function Customer({img, name, email}: ICustomerTypes) {
+export function Customer({img, name, email}: {img : string | null | any , name : string , email : string}) {
     return (
         <main className={'flex items-center justify-between'}>
             <div className={'flex gap-3 items-center'}>

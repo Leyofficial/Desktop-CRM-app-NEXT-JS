@@ -4,7 +4,9 @@ import {IoTrashOutline} from "react-icons/io5";
 import {FiEdit3} from "react-icons/fi";
 import {Skeleton} from "@chakra-ui/skeleton";
 
-export default function DealItemPage() {
+export default function DealItemPage({params} : {params : {
+    id : string
+    }}) {
     const {deal} = dealDetailList
     return (
         <div className={'bg-slate-50 rounded-md '}>
@@ -49,7 +51,7 @@ export default function DealItemPage() {
                     </div>
                 </div>
             </section>
-            <main className={'px-8 py-5'}>
+            <main className={'px-8 py-5 mb-24'}>
                 <div className={'flex justify-between items-center'}>
                     <div className={'rounded-md flex-col flex'}>
                         <div className={'flex justify-between items-center'}>

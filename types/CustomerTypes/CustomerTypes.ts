@@ -1,12 +1,24 @@
 import React, {ReactNode} from "react";
 
 export interface ICustomerTypes {
-    email: string,
-    img : React.ReactNode |  ReactNode | string,
-    name : string
-    onChoose? : any
+    user : {
+        email: string,
+        img : React.ReactNode |  ReactNode | string,
+        name : string,
+        phone : string,
+        addressInfo : {
+            address  : string,
+            street : string
+        }
+        onChoose? : any
+        id : string
+    }
 }
 
 export type CustomersType = {
-    customers : ICustomerTypes[]
+    customers : ICustomerTypes[],
+}
+export type CustomerType = {
+    customer : ICustomerTypes,
+    onClick : () => void
 }

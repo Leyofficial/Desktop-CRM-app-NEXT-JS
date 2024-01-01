@@ -6,7 +6,7 @@ import {usePathname} from "next/navigation";
 export function IconButton({icon , href} : IList){
     const link = usePathname();
     return (
-        <Link href={href} className={`${href === link ? ' bg-indigo-600 text-white' : 'bg-white'} p-2  rounded`}>
+        <Link href={href} className={`${ link === href ? ' bg-indigo-600 text-white' : 'bg-white'} p-2  rounded`}>
                 {icon}
         </Link>
 
