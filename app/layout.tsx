@@ -22,11 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Providers>
-          <main className={'flex gap-10'}>
+          <main>
               <div>
                   <Sidebar list={sideBarList}/>
               </div>
-              <section className={'w-full px-4'}>
+              <section className={'w-full px-4 pl-28'}>
                   <div>
                       <header className={'w-full'}>
                           <Header title={'Dashboard'} isButton={true} buttonTitle={'Add New'}/>

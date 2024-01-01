@@ -1,9 +1,8 @@
-import {ICustomerTypes} from "@/types/CustomerTypes/CustomerTypes";
 import {Img} from "@chakra-ui/image";
 import {IoIosArrowForward} from "react-icons/io";
 import React from "react";
 
-export function SelectUser({img , email , name , onChoose} : ICustomerTypes) {
+export function SelectUser({img , email , name , onChoose} : { img  : string | null , email : string , name : string , onChoose? : any | null  }) {
     return (
         <div onClick={() => onChoose({
             img,

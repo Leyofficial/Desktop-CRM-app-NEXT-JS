@@ -3,13 +3,21 @@ import {PropDeal} from "@/consts/deals-list";
 import {Img} from "@chakra-ui/image";
 import {FiEdit3} from "react-icons/fi";
 import {Td,} from "@chakra-ui/table";
+import {useRouter} from "next/navigation";
+import {Tr} from "@chakra-ui/react";
 
-export function DealItem({deal , onClick}: PropDeal) {
+export function DealItem({deal, onClick}: PropDeal) {
+    const router = useRouter()
+
+    function handleClick(e: any) {
+        if (e?.target?.id === 'editBtn') return
+        router.push(`/customers/${deal.id}`)
+    }
+
     const {img, addressInfo, area, date, price, status} = deal
 
     return (
-        <>
-
+        <Tr onClick={handleClick} className={'cursor-pointer'}>
             <Td>
                 <Img width={'50px'} height={'50px'} className={'rounded-full'}
                      src={'https://bit.ly/dan-abramov' || img}/>
@@ -32,9 +40,9 @@ export function DealItem({deal , onClick}: PropDeal) {
             </Td>
             <Td>
                 <div onClick={onClick} className={'text-slate-400 cursor-pointer'}>
-                    <FiEdit3 fontSize={'1.5rem'}/>
+                    <FiEdit3 fontSize={'1.7rem'}/>
                 </div>
             </Td>
-        </>
+        </Tr>
     )
 }

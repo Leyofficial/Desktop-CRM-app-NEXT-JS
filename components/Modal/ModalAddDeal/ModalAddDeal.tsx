@@ -23,9 +23,9 @@ export function ModalAddDeal({onClose, isOpen, title}: IModalAddCustomer) {
                     <ModalCloseButton/>
                     <ModalBody>
                         <div className={'flex flex-col mt-5 gap-5 items-start'}>
-                            {customersList.map((user) =>
-                                <SelectUser onChoose={setUserChoose} email={user.email} img={user.img}
-                                            name={user.name}/>
+                            {customersList.map((item) =>
+                                <SelectUser onChoose={setUserChoose} email={item.user.email} img={item.user.img}
+                                            name={item.user.name}/>
                             )}
                         </div>
                     </ModalBody>

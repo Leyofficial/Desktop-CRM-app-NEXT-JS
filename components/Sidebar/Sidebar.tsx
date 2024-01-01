@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function Sidebar({list} : PropSidebar){
     return (
-        <div className="flex flex-col h-[100%] p-6 gap-6 items-center bg-slate-50 bg-opacity-90">
+        <div className="flex flex-col h-[100vh] fixed p-6 gap-6 items-center bg-slate-50 bg-opacity-90">
                 <Link href={'/'}  className="mb-5  p-2 text-white bg-sky-950 rounded justify-center items-center inline-flex">
                         <MdEnergySavingsLeaf fontSize={'1.5rem'} />
                 </Link>
