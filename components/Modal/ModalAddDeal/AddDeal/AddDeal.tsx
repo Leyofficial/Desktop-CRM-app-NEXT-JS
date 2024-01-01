@@ -6,12 +6,12 @@ import {CustomInput} from "@/components/CustomInput/CustomInput";
 export type PropAddDeal = {
     title: string,
     user: {
-        img: string,
+        img: string | null,
         name: string,
         email: string,
     }
     onClose : () => void
-    changeCustomer : (arg : null) => void
+    changeCustomer? : (arg : null) => void
 }
 
 export function AddDeal({user, title , onClose , changeCustomer}: PropAddDeal) {
@@ -32,7 +32,7 @@ export function AddDeal({user, title , onClose , changeCustomer}: PropAddDeal) {
                             <h2 className={'text-sky-950 text-base font-bold'}>{name}</h2>
                         </div>
                     </div>
-                    <div onClick={() => changeCustomer(null)} className="cursor-pointer w-[180px] h-[50px] px-6 py-2.5 bg-white rounded-[70px] border border-slate-200 justify-center items-center gap-4 inline-flex">
+                    <div onClick={() => changeCustomer ? changeCustomer(null) : onClose()} className="cursor-pointer w-[180px] h-[50px] px-6 py-2.5 bg-white rounded-[70px] border border-slate-200 justify-center items-center gap-4 inline-flex">
                         <div className="text-sky-950 text-sm font-medium font-['Inter'] leading-[30px]">Change Customer</div>
                     </div>
                 </div>

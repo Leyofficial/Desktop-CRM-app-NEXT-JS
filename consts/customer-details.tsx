@@ -1,6 +1,7 @@
 export const customerDetails =     {
     user : {
-        name : 'Deanna Annis',
+        name : 'Deanna',
+        lastName : 'Annis',
         email : 'deannannis@gmail.com',
         img : null,
         id : 'sdsad23',
