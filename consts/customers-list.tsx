@@ -20,6 +20,9 @@ export const customersList = [
             id : 'bo2nfwq',
             phone : '999-999-9999',
             addressInfo : {
+                city : 'London',
+                stateProvince : 'PA',
+                zipCode : 'PA-23592',
                 address : '475 Spruce Drive',
                 street : 'London , PA-23592'
             },

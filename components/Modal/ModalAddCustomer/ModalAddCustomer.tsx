@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import {CustomInput} from "@/components/CustomInput/CustomInput";
 import {IModalAddCustomer} from "@/types/ModalTypes/ModalTypes";
+import {CustomFileInput} from "@/components/CustomFileInput/CustomFileInput";
 
 
 
@@ -17,7 +18,8 @@ export function ModalAddCustomer({onClose, title}: IModalAddCustomer) {
             <ModalCloseButton/>
             <ModalBody>
                 <form className={'flex flex-col gap-5 mb-3'}>
-                    <CustomInput width={'5rem'} placeholder={'ADD'} label={'Avatar'}/>
+                    {/*<CustomInput width={'5rem'} placeholder={'ADD'} label={'Avatar'}/>*/}
+                   <CustomFileInput></CustomFileInput>
                     <div className={'flex gap-5'}>
                         <CustomInput required={true} label={'First Name'}/>
                         <CustomInput required={true} label={'Last Name'}/>
