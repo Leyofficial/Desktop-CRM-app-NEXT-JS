@@ -1,4 +1,3 @@
-'use client'
 import {dealDetailList} from "@/consts/deal-detail-list";
 import {Img} from "@chakra-ui/image";
 import {IoTrashOutline} from "react-icons/io5";
@@ -7,12 +6,12 @@ import {Skeleton} from "@chakra-ui/skeleton";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
+import {SingleDealAction} from "@/Pages/DealsPage/SingleDealPage/SingleDealAction";
 
-export default function DealItemPage({params} : {params : {
+export default async function DealItemPage({params} : {params : {
     id : string
     }}) {
     const {deal} = dealDetailList
-    const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <div className={'bg-slate-50 rounded-md '}>
             <header className={'flex py-10 px-8  w-full gap-24  bg-opacity-90'}>
@@ -33,28 +32,8 @@ export default function DealItemPage({params} : {params : {
                     <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.userInfo.phone}</h2>
                 </div>
             </header>
-            <section
-                className={'flex justify-between items-center bg-white px-8 rounded-md border border-b-slate-50 py-5'}>
-                <div>
-                    <h2 className={'text-sky-950 text-[28px] text-xl mb-6 font-bold font-[\'Inter\'] leading-10"'}>{deal.userInfo.addressInfo.address},</h2>
-                    <h2 className={'text-sky-950 text-[28px] text-xl font-bold font-[\'Inter\'] leading-10"'}>{deal.userInfo.addressInfo.street}</h2>
-                </div>
-                <div className={'flex items-center gap-3'}>
-                    <div
-                        className="w-[50px] cursor-pointer h-[50px] p-[15px] bg-white rounded-[50px] border border-slate-200 justify-center items-center inline-flex">
-                        <div className="w-5 h-5 pl-[1.87px] pr-[1.88px] py-px justify-center items-center inline-flex">
-                            <div className="w-[16.25px] h-[17.92px] relative"><IoTrashOutline/>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        className="w-[50px] cursor-pointer  h-[50px] p-[15px] bg-white rounded-[50px] border border-slate-200 justify-center items-center inline-flex">
-                        <div className="w-5 h-5 pl-[1.87px] pr-[1.88px] py-px justify-center items-center inline-flex">
-                            <div onClick={onOpen} className="w-[16.25px] h-[17.92px] relative"><FiEdit3/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section>
+                <SingleDealAction userInfo={deal.userInfo}/>
             </section>
             <main className={'px-8 py-5 mb-24'}>
                 <div className={'flex justify-between items-center'}>
@@ -104,10 +83,6 @@ export default function DealItemPage({params} : {params : {
                         <Skeleton height={'400px'} width={'420px'}/>
                     </div>
                 </div>
-                <Modal size={'xl'} closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
-                    <ModalOverlay/>
-                    <ModalContent> <AddDeal user={deal.userInfo} onClose={onClose} title={'Add new deal'}/>
-                    </ModalContent></Modal>
             </main>
         </div>
     )

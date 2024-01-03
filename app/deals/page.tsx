@@ -1,11 +1,5 @@
 import {dealsList} from "@/consts/deals-list";
-import {DealItem} from "@/components/DealItem/DealItem";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
-import {BsImageAlt} from "react-icons/bs";
-import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
-import {ModalEditDeal} from "@/components/Modal/ModalEditDeal/ModalEditDeal";
-import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {DealsPageTable} from "@/Pages/DealsPage/DealsPageTable/DealsPageTable";
 
 export default async function DealsPage() {
