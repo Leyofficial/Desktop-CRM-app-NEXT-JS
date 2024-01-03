@@ -1,11 +1,6 @@
 import {dealDetailList} from "@/consts/deal-detail-list";
 import {Img} from "@chakra-ui/image";
-import {IoTrashOutline} from "react-icons/io5";
-import {FiEdit3} from "react-icons/fi";
 import {Skeleton} from "@chakra-ui/skeleton";
-import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
-import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
-import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {SingleDealAction} from "@/Pages/DealsPage/SingleDealPage/SingleDealAction";
 
 export default async function DealItemPage({params} : {params : {

@@ -1,4 +1,3 @@
-"use client"
 import {Img} from "@chakra-ui/image";
 import {customerDetails} from "@/consts/customer-details";
 import {IoTrashOutline} from "react-icons/io5";
@@ -9,6 +8,7 @@ import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {CustomLabel} from "@/components/CustomLabel/CustomLabel";
 import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
+import {SingleCustomerPage} from "@/Pages/CustomerPage/SingleCustomerPage/SingleCustomerPage";
 
 export default function CustomerItemPage({params}: {
     params: {
@@ -16,8 +16,6 @@ export default function CustomerItemPage({params}: {
     }
 }) {
 
-
-    const {isOpen, onOpen, onClose} = useDisclosure()
     const {user} = customerDetails
 
     return (
@@ -56,24 +54,13 @@ export default function CustomerItemPage({params}: {
                 </section>
             </div>
             <div className={'w-2/3 bg-slate-100 rounded-md py-7 px-10'}>
-                <header className={'flex justify-between items-center mb-5'}>
-                    <h2 className={'text-sky-950 text-xl font-bold font-[\'Inter\'] leading-[30px]'}>
-                        Recent Deals
-                    </h2>
-                    <div onClick={onOpen}
-                         className="cursor-pointer w-10 h-10 p-2.5 bg-indigo-600 rounded-[50px] justify-center items-center inline-flex">
-                        <div className=" text-sky-100 p-[4.38px] justify-center items-center inline-flex"><GoPlus
-                            fontSize={'1.5rem'}/></div>
-                    </div>
-                </header>
+              <header>
+                  <SingleCustomerPage user={user}/>
+              </header>
                 <section className={'flex flex-col gap-5'}>
                     {recentDealsList.map((item) => <UserRecentDeals deal={item.deal}/>)}
                 </section>
             </div>
-            <Modal size={'xl'} closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay/>
-                <ModalContent> <AddDeal user={user} onClose={onClose} title={'Add new deal'}/>
-                </ModalContent></Modal>
         </main>
     )
 }
