@@ -2,13 +2,13 @@
 import {useState} from "react";
 
 export function CustomFileInput({ onFileChange } : any) {
-    const [file, setFile] = useState(null);
+    const [file, setFile] = useState<File | null>(null);
 
     const handleFileChange = (e : any) => {
         const selectedFile = e.target.files[0];
         if (selectedFile) {
             setFile(selectedFile);
-            onFileChange(selectedFile);
+            // onFileChange(selectedFile);
         }
     };
     return (
@@ -23,7 +23,7 @@ export function CustomFileInput({ onFileChange } : any) {
                 id="fileInput"
                 className="hidden"
             />
-            {/*{file && <p className="mt-2">Selected File: {file.name}</p>}*/}
+            {file && <p className="mt-2">Selected File: {file.name}</p>}
         </div>
     );
 }

@@ -6,6 +6,7 @@ import {
 import {CustomInput} from "@/components/CustomInput/CustomInput";
 import {IModalAddCustomer} from "@/types/ModalTypes/ModalTypes";
 import React from "react";
+import {CustomFileInput} from "@/components/CustomFileInput/CustomFileInput";
 
 
 
@@ -16,7 +17,7 @@ export function ModalEditDeal({title}: IModalAddCustomer) {
             <ModalCloseButton/>
             <ModalBody>
                 <form className={'flex flex-col gap-5 mb-3'}>
-                    <CustomInput width={'5rem'} placeholder={'ADD'} label={'Room Images'}/>
+                    <CustomFileInput/>
                     <CustomInput required={true} label={'Address'} placeholder={'Street Address'}/>
                     <div className={'flex gap-4'}>
                         <CustomInput required={true} label={'City'} width={'12rem'}/>

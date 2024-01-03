@@ -2,6 +2,7 @@ import {Button, ModalBody, ModalCloseButton,  ModalHeader, Select} from "@chakra
 import {Img} from "@chakra-ui/image";
 import React from "react";
 import {CustomInput} from "@/components/CustomInput/CustomInput";
+import {CustomFileInput} from "@/components/CustomFileInput/CustomFileInput";
 
 export type PropAddDeal = {
     title: string,
@@ -37,7 +38,7 @@ export function AddDeal({user, title , onClose , changeCustomer}: PropAddDeal) {
                     </div>
                 </div>
                 <form className={'flex flex-col gap-5 mb-10'}>
-                    <CustomInput label={'Room Images'} placeholder={'ADD'} width={'100px'}/>
+                    <CustomFileInput/>
                     <CustomInput label={'Address'} placeholder={'Street Address'}/>
                     <div className={'flex gap-6 justify-between'}>
                         <CustomInput placeholder={'City'}/>
