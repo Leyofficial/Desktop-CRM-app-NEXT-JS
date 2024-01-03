@@ -34,7 +34,7 @@ export function TaskItem({todos , onClick} : PropTodo) {
     }
     return (
 
-        <Tr onClick={handleClick}  className={'cursor-pointer'}>
+        <Tr onClick={handleClick}>
             <Td>
                 <div className={`${color}`}>{icon ? icon : null}</div>
             </Td>

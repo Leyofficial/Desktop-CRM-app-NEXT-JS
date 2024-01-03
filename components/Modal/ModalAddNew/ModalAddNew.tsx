@@ -26,7 +26,7 @@ export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
         <>
             <Modal size={'xl'} closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
-                <ModalContent>
+                <ModalContent gap={'10px'}>
                     {userChoose === 'Customer' ? <ModalAddCustomer title={'Add New Customer'} onClose={onClose}/> :
                         userChoose  === 'Deal' ?  <ModalAddDeal isOpen={isOpen} title={'Select Customer'} onClose={onClose}/> :
                         userChoose === 'Task' ?   <ModalAddTask onClose={onClose} title={'Add new task'}/> :

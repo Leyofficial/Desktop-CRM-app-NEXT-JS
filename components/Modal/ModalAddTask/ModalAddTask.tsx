@@ -10,10 +10,10 @@ export function ModalAddTask({title , onClose} : PropModalAddTask) {
         <div className={'w-full'}>
             <ModalHeader>{title}</ModalHeader>
             <ModalCloseButton/>
-            <ModalBody className={'mt-2'}>
+            <ModalBody gap={'10px'} paddingY={'10px'} className={'mt-2'}>
                 <div className={'flex flex-col gap-5'}>
                     <div>
-                        <textarea className={'bg-slate-400 py-[12px] px-[20px] h-[90px] w-full  border border-slate-200 rounded-md'} placeholder={'Enter task description'} />
+                        <textarea className={'bg-slate-50  py-[12px] px-[20px] h-[90px] w-full  border border-slate-200 rounded-md'} placeholder={'Enter task description'} />
                     </div>
                     <div>
                         <CustomInput type={'date'} label={'Due date'} placeholder={'Due date'}/>

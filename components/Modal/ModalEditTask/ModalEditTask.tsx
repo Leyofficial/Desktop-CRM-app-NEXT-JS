@@ -25,7 +25,7 @@ export function ModalEditTask({title , onClose} : PropModalEditTask) {
                         </div>
                     </div>
                     <div>
-                        <CustomInput  label={'Due date'} placeholder={'1:26 pm 25 Nov 2024'}/>
+                        <CustomInput  label={'Due date'} type={'date' || 'text'}  placeholder={'1:26 pm 25 Nov 2024'}/>
                     </div>
                     <div>
                         <h2 className={'text-sky-950 text-base font-bold font-[\'Inter\'] mb-2'}>Description</h2>
