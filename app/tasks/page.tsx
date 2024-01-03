@@ -2,7 +2,7 @@ import {todoList} from "@/consts/todo-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
 import {TaskPageTable} from "@/Pages/TaskPage/TaskPageTable/TaskPageTable";
 
-export default function TasksPage() {
+export default async function TasksPage() {
     return (
         <div className={'w-full mt-10'}>
             <header className={'flex items-center justify-between'}>
