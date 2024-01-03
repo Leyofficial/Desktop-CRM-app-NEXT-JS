@@ -7,6 +7,9 @@ import {TaskItem} from "@/components/TaskItem/TaskItem";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {useEffect, useState} from "react";
 import {PiWarningOctagonFill} from "react-icons/pi";
+import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
+import {ModalAddCustomer} from "@/components/Modal/ModalAddCustomer/ModalAddCustomer";
+import {ModalAddTask} from "@/components/Modal/ModalAddTask/ModalAddTask";
 
 export default function TasksPage() {
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -38,6 +41,12 @@ export default function TasksPage() {
                     </Table>
                 </TableContainer>
             </main>
+            <Modal closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay/>
+                <ModalContent>
+                    <ModalAddTask onClose={onClose} title={'Add new task'}/>
+                </ModalContent>
+            </Modal>
         </div>
     )
 }
