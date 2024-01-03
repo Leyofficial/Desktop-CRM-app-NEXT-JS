@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import {todoList} from "@/consts/todo-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
 import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
@@ -6,7 +6,7 @@ import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
 import {TaskItem} from "@/components/TaskItem/TaskItem";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
-import {ModalAddTask} from "@/components/Modal/ModalAddTask/ModalAddTask";
+import {ModalEditTask} from "@/components/Modal/ModalEditTask/ModalEditTask";
 
 export default function TasksPage() {
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -41,7 +41,7 @@ export default function TasksPage() {
             <Modal closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay/>
                 <ModalContent>
-                    <ModalAddTask onClose={onClose} title={'Add new task'}/>
+                    <ModalEditTask onClose={onClose} title={'Edit task'}/>
                 </ModalContent>
             </Modal>
         </div>

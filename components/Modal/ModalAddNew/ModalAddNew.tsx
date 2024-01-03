@@ -12,6 +12,7 @@ import {ModalAddItem} from "@/components/Modal/ModalAddNew/ModalAddItem/ModalAdd
 import {useEffect, useState} from "react";
 import {ModalAddCustomer} from "@/components/Modal/ModalAddCustomer/ModalAddCustomer";
 import {ModalAddDeal} from "@/components/Modal/ModalAddDeal/ModalAddDeal";
+import {ModalAddTask} from "@/components/Modal/ModalAddTask/ModalAddTask";
 
 
 export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
@@ -28,6 +29,7 @@ export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
                 <ModalContent>
                     {userChoose === 'Customer' ? <ModalAddCustomer title={'Add New Customer'} onClose={onClose}/> :
                         userChoose  === 'Deal' ?  <ModalAddDeal isOpen={isOpen} title={'Select Customer'} onClose={onClose}/> :
+                        userChoose === 'Task' ?   <ModalAddTask onClose={onClose} title={'Add new task'}/> :
                         <>
                             <ModalHeader>
                                 <p className={'w-[105px] text-slate-400 font-medium font-[\'Inter\'] leading-[30px]'}>
