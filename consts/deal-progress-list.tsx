@@ -4,6 +4,7 @@ export const dealProgressList : IDealProgress =
     // [
     {
         img : null,
+        id : '2bew62',
         address : {
             address : '1824 Turkey Pen Road' ,
             street : 'Cleveland ,  OH , 2345'

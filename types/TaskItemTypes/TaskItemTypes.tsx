@@ -1,10 +1,11 @@
 export interface ITodoTypes {
-    status : string,
+    status : 'pending' | 'expired' | 'done',
     date : string,
     task : string
+    id? : string
 }
 
 export type PropTodo = {
-    todos : ITodoTypes,
-    onClick : () => void
+    todos : ITodoTypes[],
+    onClick? : () => void
 }

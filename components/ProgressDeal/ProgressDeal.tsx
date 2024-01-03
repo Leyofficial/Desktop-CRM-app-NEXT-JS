@@ -20,7 +20,7 @@ export function ProgressDeal({dealProgress} :  PropProgressDeal) {
                     <div className=" cursor-pointer w-[120px] h-10 px-5 py-2.5 bg-violet-100 rounded-[100px] justify-center items-center gap-2.5 inline-flex">
                         <div className="text-indigo-600 text-xs font-medium font-['Inter'] uppercase leading-tight">IN PROGRESS</div>
                     </div>
-                    <Link href={'/'} className={'text-violet-700'}>
+                    <Link href={`/deals/${dealProgress.id}`} className={'text-violet-700'}>
                         <IoIosArrowForward fontSize={'1.5rem'}/>
                     </Link>
                 </div>

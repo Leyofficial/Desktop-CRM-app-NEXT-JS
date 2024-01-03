@@ -16,6 +16,7 @@ export interface IDealProgress {
     address : IAddress,
     progress : string,
     progressSteps : IDealInfoProgress[]
+    id : string
 }
 export type PropProgressDeal = {
     dealProgress : IDealProgress

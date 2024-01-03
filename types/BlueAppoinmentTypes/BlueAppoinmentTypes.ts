@@ -3,10 +3,13 @@ export interface IAddress {
     street : string
 }
 export type PropBlueAppoinment = {
-    img? : string,
-    addressInfo : IAddress,
-    appointmentDate : string,
-    roomArea : string,
-    people  : string,
-    price : string,
+    deal : {
+        img? : string | File,
+        addressInfo : IAddress,
+        appointmentDate : string,
+        roomArea : string,
+        people  : string,
+        price : string,
+        id : string
+    }
 }

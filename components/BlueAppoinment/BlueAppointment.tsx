@@ -1,8 +1,10 @@
 import {PropBlueAppoinment} from "@/types/BlueAppoinmentTypes/BlueAppoinmentTypes";
 import {TbPointFilled} from "react-icons/tb";
 import {Img} from "@chakra-ui/image";
+import Link from "next/link";
 
-export function BlueAppointment({addressInfo , people , img , price , roomArea , appointmentDate} : PropBlueAppoinment) {
+export function BlueAppointment({deal} : PropBlueAppoinment) {
+    const {addressInfo , people , img , price , roomArea , appointmentDate , id} = deal
     return (
         <div className={' bg-indigo-600 text-white px-10 py-7 w-full rounded-md'}>
             <div className={' mb-7 flex justify-between items-center'}>
@@ -41,9 +43,9 @@ export function BlueAppointment({addressInfo , people , img , price , roomArea ,
                     Price
                     <p  className={'font-bold font-Inter'}>${price}</p>
                 </div>
-                <div className="w-[132px] h-[50px] cursor-pointer px-6 py-2.5 bg-white rounded-[70px] border border-slate-200 justify-center items-center gap-4 inline-flex">
+                <Link href={`/deals/${id}`} className="w-[132px] h-[50px] cursor-pointer px-6 py-2.5 bg-white rounded-[70px] border border-slate-200 justify-center items-center gap-4 inline-flex">
                     <div className="text-sky-950 text-sm font-medium font-Inter leading-[30px]">See Detail</div>
-                </div>
+                </Link>
             </div>
         </div>
     )
