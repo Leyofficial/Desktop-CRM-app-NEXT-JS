@@ -1,6 +1,4 @@
-import {ModalBody, ModalCloseButton, ModalFooter, ModalHeader} from "@chakra-ui/react";
-import {customersList} from "@/consts/customers-list";
-import {SelectUser} from "@/components/Modal/ModalAddDeal/SelectUser/SelectUser";
+import {ModalBody, ModalCloseButton, ModalHeader} from "@chakra-ui/react";
 import {CustomInput} from "@/components/CustomInput/CustomInput";
 
 export type PropModalAddTask = {

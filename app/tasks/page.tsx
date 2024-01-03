@@ -2,13 +2,10 @@
 import {todoList} from "@/consts/todo-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
 import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
-import {IoCheckmarkDoneCircle, IoCheckmarkDoneCircleSharp} from "react-icons/io5";
+import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
 import {TaskItem} from "@/components/TaskItem/TaskItem";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
-import {useEffect, useState} from "react";
-import {PiWarningOctagonFill} from "react-icons/pi";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
-import {ModalAddCustomer} from "@/components/Modal/ModalAddCustomer/ModalAddCustomer";
 import {ModalAddTask} from "@/components/Modal/ModalAddTask/ModalAddTask";
 
 export default function TasksPage() {
