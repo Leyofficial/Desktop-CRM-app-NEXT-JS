@@ -1,16 +1,12 @@
 import {Img} from "@chakra-ui/image";
 import {customerDetails} from "@/consts/customer-details";
 import {IoTrashOutline} from "react-icons/io5";
-import {GoPlus} from "react-icons/go";
 import {recentDealsList} from "@/consts/recent-deals-list";
 import {UserRecentDeals} from "@/components/UserRecentDeals/UserRecentDeals";
-import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
-import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {CustomLabel} from "@/components/CustomLabel/CustomLabel";
-import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
 import {SingleCustomerPage} from "@/Pages/CustomerPage/SingleCustomerPage/SingleCustomerPage";
 
-export default function CustomerItemPage({params}: {
+export default async function CustomerItemPage({params}: {
     params: {
         id: string
     }
