@@ -1,3 +1,4 @@
+'use client'
 import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
 import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
 import {todoList} from "@/consts/todo-list";

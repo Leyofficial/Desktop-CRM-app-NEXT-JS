@@ -16,7 +16,7 @@ export function ToDo({todos} : PropTodo) {
                     <h2 className={'text-sky-950 text-lg font-bold font-[\'Inter\'] leading-[30px]'}>
                         Tasks To Do
                     </h2>
-                    <Link href={'/'}
+                    <Link href={'/tasks'}
                           className={"text-right text-indigo-600 text-sm font-medium font-['Inter'] leading-[30px]"}>View
                         All</Link>
                 </div>

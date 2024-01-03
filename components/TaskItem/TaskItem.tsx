@@ -1,12 +1,12 @@
-'use client'
-import {PropTodo} from "@/types/TaskItemTypes/TaskItemTypes";
+"use client"
+import {ITodoTypes} from "@/types/TaskItemTypes/TaskItemTypes";
 import {Td, Tr} from "@chakra-ui/table";
 import {FiEdit3} from "react-icons/fi";
 import {useEffect, useState} from "react";
 import {PiWarningOctagonFill} from "react-icons/pi";
 import {IoCheckmarkDoneCircle} from "react-icons/io5";
 
-export function TaskItem({todos , onClick} : PropTodo) {
+export function TaskItem({todos , onClick} : {todos : ITodoTypes , onClick : () => void} ) {
     const {status , date , task} = todos
 
     const [color , setColor] = useState('text-slate-400');
