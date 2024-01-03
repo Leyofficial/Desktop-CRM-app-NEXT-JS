@@ -1,16 +1,8 @@
-"use client"
 import {todoList} from "@/consts/todo-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
-import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
-import {TaskItem} from "@/components/TaskItem/TaskItem";
-import {useDisclosure} from "@chakra-ui/react-use-disclosure";
-import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
-import {ModalEditTask} from "@/components/Modal/ModalEditTask/ModalEditTask";
+import {TaskPageTable} from "@/Pages/TaskPage/TaskPageTable/TaskPageTable";
 
 export default function TasksPage() {
-    const {isOpen, onOpen, onClose} = useDisclosure()
-
     return (
         <div className={'w-full mt-10'}>
             <header className={'flex items-center justify-between'}>
@@ -20,30 +12,8 @@ export default function TasksPage() {
                 </div>
             </header>
             <main className={'mt-10'}>
-                <TableContainer>
-                    <Table variant='simple'>
-                        <Thead>
-                            <Tr>
-                                <Th><IoCheckmarkDoneCircleSharp  fontSize={'1.5rem'}/></Th>
-                                <Th>Due Date</Th>
-                                <Th>Task</Th>
-                                <Th>Edit</Th>
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            {todoList.map((item) =>
-                                <TaskItem todos={item} onClick={onOpen}/>
-                            )}
-                        </Tbody>
-                    </Table>
-                </TableContainer>
+               <TaskPageTable/>
             </main>
-            <Modal closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay/>
-                <ModalContent>
-                    <ModalEditTask onClose={onClose} title={'Edit task'}/>
-                </ModalContent>
-            </Modal>
         </div>
     )
 }

@@ -8,6 +8,23 @@ import {IModalAddCustomer} from "@/types/ModalTypes/ModalTypes";
 import React from "react";
 import {CustomFileInput} from "@/components/CustomFileInput/CustomFileInput";
 
+export interface IEditDeal {
+    updatedDeal : {
+        img : string | null | File,
+        addressInfo : {
+            address : string,
+            street : string,
+            zipCode : string,
+            stateProvince : string,
+        },
+        roomArea : number | string,
+        numPeople : number | string,
+        date : string,
+        roomAccess : string,
+        price : string | number
+    }
+
+}
 
 
 export function ModalEditDeal({title}: IModalAddCustomer) {
