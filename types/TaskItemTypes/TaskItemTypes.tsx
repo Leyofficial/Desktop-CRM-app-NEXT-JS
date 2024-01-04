@@ -5,6 +5,10 @@ export interface ITodoTypes {
     id? : string
 }
 
+export interface ITodosTypes {
+    todos : ITodoTypes[]
+}
+
 export type PropTodo = {
     todos : ITodoTypes[],
     onClick? : () => void

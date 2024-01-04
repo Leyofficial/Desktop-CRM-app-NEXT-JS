@@ -1,13 +1,13 @@
 'use client'
 import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
 import {IoCheckmarkDoneCircleSharp} from "react-icons/io5";
-import {todoList} from "@/consts/todo-list";
 import {TaskItem} from "@/components/TaskItem/TaskItem";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {ModalEditTask} from "@/components/Modal/ModalEditTask/ModalEditTask";
+import {ITodosTypes, ITodoTypes} from "@/types/TaskItemTypes/TaskItemTypes";
 
-export function TaskPageTable() {
+export function TaskPageTable({todos} : ITodosTypes) {
     const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <>
@@ -22,7 +22,7 @@ export function TaskPageTable() {
                         </Tr>
                     </Thead>
                     <Tbody>
-                        {todoList.map((item) =>
+                        {todos?.map((item : ITodoTypes) =>
                             <TaskItem todos={item} onClick={onOpen}/>
                         )}
                     </Tbody>

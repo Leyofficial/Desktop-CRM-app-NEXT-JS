@@ -1,6 +1,6 @@
 import {todoList} from "@/consts/todo-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {TaskPageTable} from "@/Pages/TaskPage/TaskPageTable/TaskPageTable";
+import {TaskPageTable} from "@/pages/TaskPage/TaskPageTable/TaskPageTable";
 
 export default async function TasksPage() {
     return (
@@ -12,7 +12,7 @@ export default async function TasksPage() {
                 </div>
             </header>
             <main className={'mt-10'}>
-               <TaskPageTable/>
+               <TaskPageTable todos={todoList}/>
             </main>
         </div>
     )
