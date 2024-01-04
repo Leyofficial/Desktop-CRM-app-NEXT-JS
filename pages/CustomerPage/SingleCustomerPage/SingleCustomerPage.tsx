@@ -3,8 +3,9 @@ import {GoPlus} from "react-icons/go";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
+import {ICustomerTypes} from "@/types/CustomerTypes/CustomerTypes";
 
-export function SingleCustomerPage({user} : any) {
+export function SingleCustomerPage({user} : ICustomerTypes) {
     const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <>

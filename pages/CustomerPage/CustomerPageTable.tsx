@@ -2,12 +2,12 @@
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
 import {BsImageAlt} from "react-icons/bs";
-import {customersList} from "@/consts/customers-list";
 import {CustomerItem} from "@/components/CustomerItem/CustomerItem";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {ModalAddCustomer} from "@/components/Modal/ModalAddCustomer/ModalAddCustomer";
+import {CustomersType} from "@/types/CustomerTypes/CustomerTypes";
 
-export function CustomerPageTable() {
+export function CustomerPageTable({customers} : CustomersType) {
     const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <>
@@ -24,7 +24,7 @@ export function CustomerPageTable() {
                         </Tr>
                     </Thead>
                     <Tbody>
-                        {customersList.map((item) =>
+                        {customers?.map((item) =>
                             <CustomerItem customer={item} onClick={onOpen}/>
                         )}
                     </Tbody>

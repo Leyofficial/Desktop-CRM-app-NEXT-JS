@@ -1,4 +1,3 @@
-
 import {BlueAppointment} from "@/components/BlueAppoinment/BlueAppointment";
 import {blueAppoinmentList} from "@/consts/blue-appoinment-list";
 import {CustomersCounter} from "@/components/Counter/Customers/CustomersCounter";
@@ -11,8 +10,9 @@ import {Customers} from "@/components/Customers/Customers";
 import {customersList} from "@/consts/customers-list";
 import {ToDo} from "@/components/ToDo/ToDo";
 import {todoList} from "@/consts/todo-list";
+import {dealsList} from "@/consts/deals-list";
 
-export default function Home() {
+export default async function Home() {
     return (
                     <section className={'my-5 pr-5  flex gap-7 justify-between'}>
                         <div className={'w-full max-w-[350px]'}>
@@ -20,8 +20,8 @@ export default function Home() {
                                 <BlueAppointment deal={blueAppoinmentList.deal} />
                             </div>
                             <section data-testid="customers-counter" className={'flex flex-col gap-7'}>
-                                <CustomersCounter title={'Customers'} numberOfPeople={10}/>
-                                <DealsCounter title={'Deals'} numberOfPeople={82}/>
+                                <CustomersCounter title={'Customers'} numberOfPeople={customersList.length}/>
+                                <DealsCounter title={'Deals'} numberOfPeople={dealsList.length}/>
                             </section>
                         </div>
                         <div className={'w-full'}>
