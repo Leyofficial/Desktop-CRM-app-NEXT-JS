@@ -1,13 +1,13 @@
 'use client'
 import {Table, TableContainer, Tbody, Th, Thead, Tr} from "@chakra-ui/table";
 import {BsImageAlt} from "react-icons/bs";
-import {dealsList} from "@/consts/deals-list";
 import {DealItem} from "@/components/DealItem/DealItem";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {ModalEditDeal} from "@/components/Modal/ModalEditDeal/ModalEditDeal";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
+import {IDeal, IDeals} from "@/consts/deals-list";
 
-export function DealsPageTable() {
+export function DealsPageTable({deals} : IDeals) {
     const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <>
@@ -25,7 +25,7 @@ export function DealsPageTable() {
                         </Tr>
                     </Thead>
                     <Tbody>
-                        {dealsList.map((item) =>
+                        {deals.map((item : IDeal) =>
                             <DealItem onClick={onOpen} deal={item.deal}/>
                         )}
                     </Tbody>
