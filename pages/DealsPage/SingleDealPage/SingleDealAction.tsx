@@ -4,16 +4,17 @@ import {FiEdit3} from "react-icons/fi";
 import {useDisclosure} from "@chakra-ui/react-use-disclosure";
 import {Modal, ModalContent, ModalOverlay} from "@chakra-ui/react";
 import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
+import {ICustomerTypes} from "@/types/CustomerTypes/CustomerTypes";
 
-export function SingleDealAction({userInfo} : any){
+export function SingleDealAction({user} : ICustomerTypes){
     const {isOpen, onOpen, onClose} = useDisclosure()
      return (
          <>
              <section
                  className={'flex justify-between items-center bg-white px-8 rounded-md border border-b-slate-50 py-5'}>
                  <div>
-                     <h2 className={'text-sky-950 text-[28px] text-xl mb-6 font-bold font-[\'Inter\'] leading-10"'}>{userInfo.addressInfo.address},</h2>
-                     <h2 className={'text-sky-950 text-[28px] text-xl font-bold font-[\'Inter\'] leading-10"'}>{userInfo.addressInfo.street}</h2>
+                     <h2 className={'text-sky-950 text-[28px] text-xl mb-6 font-bold font-[\'Inter\'] leading-10"'}>{user.addressInfo.address},</h2>
+                     <h2 className={'text-sky-950 text-[28px] text-xl font-bold font-[\'Inter\'] leading-10"'}>{user.addressInfo.street}</h2>
                  </div>
                  <div className={'flex items-center gap-3'}>
                      <div
@@ -34,7 +35,7 @@ export function SingleDealAction({userInfo} : any){
              </section>
              <Modal size={'xl'} closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
                  <ModalOverlay/>
-                 <ModalContent> <AddDeal user={userInfo} onClose={onClose} title={'Add new deal'}/>
+                 <ModalContent> <AddDeal user={user} onClose={onClose} title={'Edit deal'}/>
                  </ModalContent>
              </Modal>
          </>

@@ -1,4 +1,4 @@
-export const dealsList : PropDeal[] = [
+export const dealsList : IDeal[] = [
     {
         deal  : {
             img : null,
@@ -31,11 +31,28 @@ export const dealsList : PropDeal[] = [
 
 export type PropDeal = {
     onClick? : () => void;
-    deal : IDeal
+    deal : IWrapperDeal
 }
 
+export interface IDeals {
+    deals  : IDeal[]
+}
 export interface IDeal {
-    img : string | null,
+    deal : {
+        img : string | null | File,
+        addressInfo :  {
+            address : string,
+            zipCode : string
+        },
+        area : string| number
+        date : string
+        price : string
+        status : string
+        id : string
+    }
+}
+export interface IWrapperDeal {
+    img : string | null | File,
     addressInfo :  {
         address : string,
         zipCode : string

@@ -1,7 +1,7 @@
 import {dealDetailList} from "@/consts/deal-detail-list";
 import {Img} from "@chakra-ui/image";
 import {Skeleton} from "@chakra-ui/skeleton";
-import {SingleDealAction} from "@/Pages/DealsPage/SingleDealPage/SingleDealAction";
+import {SingleDealAction} from "@/pages/DealsPage/SingleDealPage/SingleDealAction";
 
 export default async function DealItemPage({params} : {params : {
     id : string
@@ -12,23 +12,23 @@ export default async function DealItemPage({params} : {params : {
             <header className={'flex py-10 px-8  w-full gap-24  bg-opacity-90'}>
                 <div className={'flex gap-4'}>
                     <Img width={'50px'} height={'50px'} className={'rounded-full bg-slate-400'}
-                         src={'https://bit.ly/dan-abramov' || deal.userInfo.img}/>
+                         src={'https://bit.ly/dan-abramov' || deal.user.img}/>
                     <div>
                         <p className={'text-slate-400 text-sm font-normal font-[\'Inter\'] leading-[30px]'}>Customer</p>
-                        <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.userInfo.name} {deal.userInfo.lastName}</h2>
+                        <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.user.name} {deal.user.lastName}</h2>
                     </div>
                 </div>
                 <div>
                     <p className={'text-slate-400 text-sm font-normal font-[\'Inter\'] leading-[30px]'}>Email</p>
-                    <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.userInfo.email}</h2>
+                    <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.user.email}</h2>
                 </div>
                 <div>
                     <p className={'text-slate-400 text-sm font-normal font-[\'Inter\'] leading-[30px]'}>Phone</p>
-                    <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.userInfo.phone}</h2>
+                    <h2 className={'text-slate-600 text-xm font-bold font-[\'Inter\']'}>{deal.user.phone}</h2>
                 </div>
             </header>
             <section>
-                <SingleDealAction userInfo={deal.userInfo}/>
+                <SingleDealAction user={deal.user}/>
             </section>
             <main className={'px-8 py-5 mb-24'}>
                 <div className={'flex justify-between items-center'}>

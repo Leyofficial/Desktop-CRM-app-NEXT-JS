@@ -1,6 +1,6 @@
 import {dealsList} from "@/consts/deals-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {DealsPageTable} from "@/Pages/DealsPage/DealsPageTable/DealsPageTable";
+import {DealsPageTable} from "@/pages/DealsPage/DealsPageTable/DealsPageTable";
 
 export default async function DealsPage() {
     return (
@@ -12,7 +12,7 @@ export default async function DealsPage() {
                 </div>
             </header>
             <main className={'mt-10'}>
-               <DealsPageTable/>
+               <DealsPageTable deals={dealsList}/>
             </main>
         </div>
     )

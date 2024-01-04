@@ -1,6 +1,6 @@
 export const dealDetailList = {
     deal: {
-        userInfo: {
+        user: {
             img: null,
             name: 'Deanna',
             lastName: 'Annis',
@@ -10,6 +10,7 @@ export const dealDetailList = {
                 address: '2893 Austin Secret Lane',
                 street: 'Parowan,UT,12413'
             },
+            id : '23232vh'
         },
         img: null,
         status: 'In Progress',
