@@ -1,6 +1,6 @@
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
 import {customersList} from "@/consts/customers-list";
-import {CustomerPageTable} from "@/Pages/CustomerPage/CustomerPageTable";
+import {CustomerPageTable} from "@/pages/CustomerPage/CustomerPageTable";
 
 
 export default async function CustomerPage() {
@@ -14,7 +14,7 @@ export default async function CustomerPage() {
                 </div>
             </header>
             <main className={'mt-10'}>
-               <CustomerPageTable/>
+               <CustomerPageTable customers={customersList}/>
             </main>
         </div>
     )
