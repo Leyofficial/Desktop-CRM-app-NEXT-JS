@@ -1,11 +1,10 @@
 import {IModalAddCustomer} from "@/types/ModalTypes/ModalTypes";
 import { ModalBody, ModalCloseButton, ModalFooter, ModalHeader} from "@chakra-ui/react";
-import {customersList} from "@/consts/customers-list";
 import {SelectUser} from "@/components/Modal/ModalAddDeal/SelectUser/SelectUser";
 import {useEffect, useState} from "react";
 import {AddDeal} from "@/components/Modal/ModalAddDeal/AddDeal/AddDeal";
 
-export function ModalAddDeal({onClose, isOpen, title}: IModalAddCustomer) {
+export function ModalAddDeal({onClose, isOpen, title , customers}: IModalAddCustomer) {
     const [userChoose, setUserChoose] = useState(null);
 
     useEffect(() => {
@@ -23,7 +22,7 @@ export function ModalAddDeal({onClose, isOpen, title}: IModalAddCustomer) {
                     <ModalCloseButton/>
                     <ModalBody>
                         <div className={'flex flex-col mt-5 gap-5 items-start'}>
-                            {customersList.map((item) =>
+                            {customers?.map((item) =>
                                 <SelectUser onChoose={setUserChoose} email={item.user.email} img={item.user.img}
                                             name={item.user.name}/>
                             )}

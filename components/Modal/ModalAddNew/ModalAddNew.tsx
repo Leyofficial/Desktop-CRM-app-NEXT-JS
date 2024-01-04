@@ -1,3 +1,4 @@
+'use client'
 import {
     Modal,
     ModalBody,
@@ -6,16 +7,16 @@ import {
     ModalHeader,
     ModalOverlay
 } from "@chakra-ui/react";
-import {TypeModalAddNew} from "@/types/ModalAddNewTypes/ModalAddNewTypes";
 import {modalAddList} from "@/consts/modal-add-list";
 import {ModalAddItem} from "@/components/Modal/ModalAddNew/ModalAddItem/ModalAddItem";
 import {useEffect, useState} from "react";
 import {ModalAddCustomer} from "@/components/Modal/ModalAddCustomer/ModalAddCustomer";
 import {ModalAddDeal} from "@/components/Modal/ModalAddDeal/ModalAddDeal";
 import {ModalAddTask} from "@/components/Modal/ModalAddTask/ModalAddTask";
+import {TypeModalAddNew} from "@/types/ModalTypes/ModalTypes";
 
 
-export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
+export function ModalAddNew({isOpen , onClose , title , customers} : TypeModalAddNew) {
     const [userChoose , setUserChoose] = useState(null);
 
     useEffect(() => {
@@ -28,7 +29,7 @@ export function ModalAddNew({isOpen , onClose , title } : TypeModalAddNew) {
                 <ModalOverlay />
                 <ModalContent gap={'10px'}>
                     {userChoose === 'Customer' ? <ModalAddCustomer title={'Add New Customer'} onClose={onClose}/> :
-                        userChoose  === 'Deal' ?  <ModalAddDeal isOpen={isOpen} title={'Select Customer'} onClose={onClose}/> :
+                        userChoose  === 'Deal' ?  <ModalAddDeal customers={customers} isOpen={isOpen} title={'Select Customer'} onClose={onClose}/> :
                         userChoose === 'Task' ?   <ModalAddTask onClose={onClose} title={'Add new task'}/> :
                         <>
                             <ModalHeader>

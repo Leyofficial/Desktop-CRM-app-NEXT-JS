@@ -3,17 +3,9 @@ import {Img} from "@chakra-ui/image";
 import React from "react";
 import {CustomInput} from "@/components/CustomInput/CustomInput";
 import {CustomFileInput} from "@/components/CustomFileInput/CustomFileInput";
+import {PropAddDeal} from "@/types/ModalTypes/ModalTypes";
 
-export type PropAddDeal = {
-    title: string,
-    user: {
-        img: string | null,
-        name: string,
-        email: string,
-    }
-    onClose : () => void
-    changeCustomer? : (arg : null) => void
-}
+
 
 export function AddDeal({user, title , onClose , changeCustomer}: PropAddDeal) {
     const {img, name, email} = user
@@ -75,7 +67,7 @@ export function AddDeal({user, title , onClose , changeCustomer}: PropAddDeal) {
                                 Close
                             </Button>
                             <button className="w-[150px] h-[50px] px-6 py-2.5 bg-indigo-600 rounded-[70px] justify-center items-center gap-4 inline-flex">
-                                <div className="text-white font-medium font-['Inter'] leading-[30px]">Save Customer</div>
+                                <div className="text-white font-medium font-['Inter'] leading-[30px]">Save Deal</div>
                             </button>
                         </div>
                     </footer>

@@ -1,7 +1,7 @@
-import {PropModalAddItem} from "@/types/ModalAddNewTypes/ModalAddNewTypes";
 import {HiOutlineBriefcase} from "react-icons/hi";
 import {HiMiniUsers} from "react-icons/hi2";
 import {BsListTask} from "react-icons/bs";
+import {PropModalAddItem} from "@/types/ModalTypes/ModalTypes";
 
 export const modalAddList : PropModalAddItem[] = [
     {

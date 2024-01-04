@@ -1,9 +1,7 @@
-import React, {ReactNode} from "react";
-
 export interface ICustomerTypes {
     user : {
         email: string,
-        img : React.ReactNode |  ReactNode | string,
+        img : string | File | null,
         name : string,
         phone : string,
         addressInfo : {
