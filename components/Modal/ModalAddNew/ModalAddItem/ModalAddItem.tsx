@@ -1,6 +1,6 @@
 import React from "react";
-import {PropModalAddItem} from "@/types/ModalAddNewTypes/ModalAddNewTypes";
 import {IoIosArrowForward} from "react-icons/io";
+import {PropModalAddItem} from "@/types/ModalTypes/ModalTypes";
 
 
 export function ModalAddItem({icon , title , onClickCallback} : PropModalAddItem) {
