@@ -1,6 +1,6 @@
 import {todoList} from "@/consts/todo-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {TaskPageTable} from "@/pages/TaskPage/TaskPageTable/TaskPageTable";
+import {TaskPageTable} from "@/ui/TaskPage/TaskPageTable/TaskPageTable";
 
 export default async function TasksPage() {
     return (

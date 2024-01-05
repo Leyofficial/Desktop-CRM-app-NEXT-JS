@@ -1,7 +1,7 @@
 import {dealDetailList} from "@/consts/deal-detail-list";
 import {Img} from "@chakra-ui/image";
 import {Skeleton} from "@chakra-ui/skeleton";
-import {SingleDealAction} from "@/pages/DealsPage/SingleDealPage/SingleDealAction";
+import {SingleDealAction} from "@/ui/DealsPage/SingleDealPage/SingleDealAction";
 
 export default async function DealItemPage({params} : {params : {
     id : string

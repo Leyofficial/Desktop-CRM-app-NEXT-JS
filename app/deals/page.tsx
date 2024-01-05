@@ -1,6 +1,6 @@
 import {dealsList} from "@/consts/deals-list";
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
-import {DealsPageTable} from "@/pages/DealsPage/DealsPageTable/DealsPageTable";
+import {DealsPageTable} from "@/ui/DealsPage/DealsPageTable/DealsPageTable";
 
 export default async function DealsPage() {
     return (

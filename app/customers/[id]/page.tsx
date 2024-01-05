@@ -4,7 +4,7 @@ import {IoTrashOutline} from "react-icons/io5";
 import {recentDealsList} from "@/consts/recent-deals-list";
 import {UserRecentDeals} from "@/components/UserRecentDeals/UserRecentDeals";
 import {CustomLabel} from "@/components/CustomLabel/CustomLabel";
-import {SingleCustomerPage} from "@/pages/CustomerPage/SingleCustomerPage/SingleCustomerPage";
+import {SingleCustomerPage} from "@/ui/CustomerPage/SingleCustomerPage/SingleCustomerPage";
 
 export default async function CustomerItemPage({params}: {
     params: {

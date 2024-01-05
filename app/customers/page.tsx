@@ -1,6 +1,6 @@
 import {CustomSelector} from "@/components/CustomSelector/CustomSelector";
 import {customersList} from "@/consts/customers-list";
-import {CustomerPageTable} from "@/pages/CustomerPage/CustomerPageTable";
+import {CustomerPageTable} from "@/ui/CustomerPage/CustomerPageTable";
 
 
 export default async function CustomerPage() {
