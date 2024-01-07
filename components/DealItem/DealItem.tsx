@@ -7,14 +7,13 @@ import {useRouter} from "next/navigation";
 import {Tr} from "@chakra-ui/react";
 
 export function DealItem({deal, onClick}: PropDeal) {
+    const {img, addressInfo, area, date, price, status} = deal;
     const router = useRouter();
 
     function handleClick(e: any) {
         if (e?.target?.id === 'editBtn') return
         router.push(`/deals/${deal.id}`)
     }
-
-    const {img, addressInfo, area, date, price, status} = deal;
 
     return (
         <Tr onClick={handleClick} className={'cursor-pointer'}>

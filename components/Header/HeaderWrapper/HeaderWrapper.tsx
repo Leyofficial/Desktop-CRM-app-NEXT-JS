@@ -29,7 +29,6 @@ export function HeaderWrapper({title, buttonTitle, isButton , customers}: PropHe
                                  src={'https://bit.ly/dan-abramov'}/>
 
                         </>
-
                 </div>
             </section>
             <ModalAddNew customers={customers} isOpen={isOpen} onClose={onClose} title={'Add New'}/>
