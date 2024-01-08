@@ -9,6 +9,7 @@ describe('Page', () => {
         const dashboardTitle = screen.getByText('Dashboard');
         expect(dashboardTitle).toBeInTheDocument();
 
+
         // Проверка наличия кнопки с текстом "Add New"
         const addButton = screen.getByText('Add New');
         expect(addButton).toBeInTheDocument();
